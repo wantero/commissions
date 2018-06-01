@@ -9,4 +9,8 @@ module.exports = function(server) {
     //USER Routes
     const userService = require('../api/user/userService')
     userService.register(router, '/user')
+
+    //VENDOR Routes
+    const vendorService = require('../api/vendor/vendorService')
+    vendorService.register(router, '/vendor')
 }
