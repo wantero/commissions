@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise //remove alert message
-module.exports = mongoose.connect('mongodb://localhost/commissions')
+module.exports = mongoose.connect('mongodb://localhost/commissions', { useMongoClient: true })
 
 mongoose.Error.messages.general.required = "O atributo '{PATH}' é obrigatório."
 mongoose.Error.messages.Number.min = 
